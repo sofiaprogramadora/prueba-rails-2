@@ -12,6 +12,10 @@ class Item < ApplicationRecord
 	scope :no_user, -> {where(user_id: nil)}
 
 
+	def to_s
+		"#{self.name}: #{self.user}, #{self.size}"
+	end
+
 	def destroy_parent
 		Category.all.each do |c|
 

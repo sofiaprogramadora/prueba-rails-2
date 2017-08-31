@@ -8,4 +8,8 @@ class User < ApplicationRecord
 		self.name.capitalize!
 	end
 
+	def to_s
+		"#{self.name}"
+	end
+
 end

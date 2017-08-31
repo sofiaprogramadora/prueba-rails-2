@@ -1,0 +1,12 @@
+<!-- Construir una vista que muestre todos los trabajos
+junto al usuario a cargo, al ítem y la categoría del ítem.
+Esta vista debe ser la página principal.
+Crear un link que permita borrar un item. -->
+
+<h1>Trabajos disponibles:</h1>
+
+<ul>
+	<% Item.all.each do |i| %>
+		<li><%= i.to_s %></li>
+	<% end %>
+</ul>
